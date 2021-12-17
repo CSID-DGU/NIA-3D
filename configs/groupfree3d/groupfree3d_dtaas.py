@@ -62,7 +62,6 @@ model = dict(
                         [0,0,0],
                         [0,0,0],
                         [0,0,0],
-                        [0,0,0],
                         [0,0,0],                        
                         [0,0,0]]),
         sampling_objectness_loss=dict(
