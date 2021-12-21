@@ -42,7 +42,7 @@ def main(dir_root):
                 npPoints = np.array(points)
                 cx, cy, cz = np.round((npPoints[0] + npPoints[1]) / 2, 6)
                 w, l, h = np.round(npPoints[1] - npPoints[0], 6)
-                cat_name = label2cat[bbox_dir_name.split("_")[0]]
+                cat_name = label2cat[bbox_dir_name.split(".")[0].split("_")[0]]
                 label.append(cat_name)
                 label.extend([cx, cy, cz])
                 label.extend([w, l, h])
