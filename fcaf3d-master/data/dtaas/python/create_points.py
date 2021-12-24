@@ -23,10 +23,7 @@ def main(dir_root):
                 points.append(line.strip().split(" "))
             npPoints = np.array(points)
             print(npPoints.shape)
-            floatPoint = npPoints[:, 0:3].astype(float)
-            intPoint = npPoints[:, 3:6].astype(int)
-            binPoint = np.concatenate((floatPoint, intPoint), axis=1)
-
+            binPoint = npPoints[:, 0:6]
             savemat(f"{depth_path}/{idx+1:06d}.mat", {'instance': binPoint})
 
 if __name__ == '__main__':
