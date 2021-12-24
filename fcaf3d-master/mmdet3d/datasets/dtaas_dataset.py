@@ -41,8 +41,7 @@ class DTAASDataset(Custom3DDataset):
         test_mode (bool, optional): Whether the dataset is in test mode.
             Defaults to False.
     """
-    CLASSES = ('bed', 'table', 'sofa', 'chair', 'toilet', 'desk', 'dresser',
-               'night_stand', 'bookshelf', 'bathtub')
+    CLASSES = ('bed', 'table', 'sofa', 'chair', 'desk', 'lighting','tv', 'storage_closet', 'computer')
 
     def __init__(self,
                  data_root,
