@@ -24,7 +24,7 @@ def main(dir_root):
             npPoints = np.array(points)
             print(npPoints.shape)
             binPoint = npPoints[:, 0:6]
-            savemat(f"{depth_path}/{idx+1:06d}.mat", {'instance': binPoint})
+            savemat(f"{depth_path}/{idx+1:06d}.mat", {'instance': binPoint.tolist()})
 
 if __name__ == '__main__':
     dir_root = 'data/dtaas/DTAAS'
